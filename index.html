@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ga526云智能房价牌免费的智能房价牌</title>
+	<meta name="keywords" content="ga526房价牌,智能房价牌,云房价牌,酒店房价牌,酒店电子房价牌">
+	<meta name="description" content="ga526云智能房价牌是由艾客科技打造一款免费的云房价牌系统,可显示房价,客房照片,时间,天气等功能">
+	<meta http-equiv='refresh' content='10800;url=./my.php?phone=15387717157'><link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	<script src="/static/css/mootools.js" type="text/javascript"></script>
+	<script src="/static/css/animate.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/css/photo.js"></script>
+
+	<script type="text/javascript">
+		function handleFiles(file,obj) {
+			var con = obj.innerHTML;
+			if (con.indexOf("img") > 0) {
+				var pic = obj.getElementsByTagName("img");
+				for (var i=0; i<pic.length; i++) {
+					obj.removeChild(pic[i]);
+				}
+				creatImg();
+			} else {
+				creatImg();
+			}
+			function creatImg() {
+				var img = document.createElement("img");
+				img.src = window.URL.createObjectURL(file[0]);
+				img.onload = function() {
+					window.URL.revokeObjectURL(this.src);
+				}
+				obj.appendChild(img);
+			}
+		}
+
+		function FullScreen() {
+			var docElm = document.documentElement;
+			//W3C
+			if (docElm.requestFullscreen) {
+				docElm.requestFullscreen();
+			}
+			//FireFox
+			else if (docElm.mozRequestFullScreen) {
+				docElm.mozRequestFullScreen();
+			}
+			//Chrome等
+			else if (docElm.webkitRequestFullScreen) {
+				docElm.webkitRequestFullScreen();
+			}
+			//IE11
+			else if (docElm.msRequestFullscreen) {
+				docElm.msRequestFullscreen();
+				ieIsfSceen = true;
+			}
+		}
+		function check(){
+			if (document.form1.phone.value == ""){
+				alert("请输入您的手机号!!");
+				document.form1.phone.focus();
+				return false;
+			}
+		}
+		var w= document.documentElement.offsetWidth|| document.body.offsetWidth;
+		var h= document.documentElement.offsetHeight|| document.body.offsetHeight;
+		if (w<h)
+		{
+			window.location.href = "my_h.php";
+		}
+
+	</script>
+	<style type="text/css">
+		<!--
+		input{
+			outline-style: none ;
+			border: 1px solid #468f5d;
+			font-size: 32px;
+			padding: 10px;
+			width:50%;
+			background:#e5ffeb;
+		}
+		.input_s{
+			outline-style: none ;
+			border: 1px solid #ccc;
+			font-size: 19px;
+			padding: 10px;
+			width:100%;
+		}
+		#bgimg{
+			background-image: url(/static/img/bg-01.jpg);
+		}
+		*{padding: 0px;margin: 0px;}
+		#flash{width:100%;height: 100%;margin: 20px auto;}
+		#flash #play{width:100%;height: 100%;}
+		#flash #play li{display: none;}
+		#flash #play li img{float: left;width: 100%;}
+		#button{position: absolute;bottom:20px;list-style: none;}
+		#button li{margin-left: 10px;float: left;}
+		.box{height:200px;overflow:hidden;}
+		.box ul{margin:0;padding:0}
+		.box li{height:80px;text-align:center;list-style-type:none;}
+		.xz
+		{
+			height:80%;
+			width:50%;
+			position:absolute;
+			top:14%;
+			left:24%;
+			z-index:99;
+			background: white;
+			text-align: right;
+			padding: 20px;
+		}
+		.xz_mf
+		{
+			height:80%;
+			width:50%;
+			position:absolute;
+			top:25%;
+			left:18%;
+			z-index:98;
+
+		}
+		.xz2
+		{
+			width: 100%;
+			height: 100%;
+			opacity:0.7;
+			filter:alpha(opacity=70);
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:98;
+			background: silver;
+			background:#000000;
+		}
+		-->
+	</style>
+</head>
+<body>
+<div id="over"></div>
+
+<div class="limiter" id="body">
+	<div class="container-login1002" id="bgimg">
+
+		<div id="head">
+			<div id="x1" class="fs-50 lh-1-2">
+				<div style="float: left;">
+					<img src='/static/me_photo/logo15387717157.jpg' height='100px'>		</div>
+				<div style="float: left;">
+					美铭酒店（多宝老爷庙店）		<br/><span class="fs-20">服务热线：0792-5555557</span>
+				</div>
+
+			</div>
+			<div id="x2">
+				<div id="n1" class="fs-29 lh-1-8">
+					<script type="text/JavaScript" src="/static/css/nav.js"></script>
+				</div>
+				<div id="n2">
+					<div class="clockbox">
+						<div id="back">
+							<div id="upperHalfBack">
+								<img src="/static/img/spacer.png" /><img id="hoursUpBack" src="Single/Up/AM/0.png"/>
+								<img id="minutesUpLeftBack" src="Double/Up/Left/0.png" class="asd" /><img id="minutesUpRightBack" src="Double/Up/Right/0.png"/>
+								<img id="secondsUpLeftBack" src="Double/Up/Left/0.png" /><img id="secondsUpRightBack" src="Double/Up/Right/0.png"/>
+							</div>
+							<div id="lowerHalfBack">
+								<img src="/static/img/spacer.png" /><img id="hoursDownBack" src="Single/Down/AM/0.png" />
+								<img id="minutesDownLeftBack" src="Double/Down/Left/0.png" /><img id="minutesDownRightBack" src="Double/Down/Right/0.png" />
+								<img id="secondsDownLeftBack" src="Double/Down/Left/0.png" /><img id="secondsDownRightBack" src="Double/Down/Right/0.png" />
+							</div>
+						</div>
+						<div id="front">
+							<div id="upperHalf">
+								<img src="/static/img/spacer.png" /><img id="hoursUp" src="Single/Up/AM/0.png"/>
+								<img id="minutesUpLeft" src="Double/Up/Left/0.png" /><img id="minutesUpRight" src="Double/Up/Right/0.png"/>
+								<img id="secondsUpLeft" src="Double/Up/Left/0.png" /><img id="secondsUpRight" src="Double/Up/Right/0.png"/>
+							</div>
+							<div id="lowerHalf">
+								<img src="/static/img/spacer.png" /><img id="hoursDown" src="Single/Down/AM/0.png"/>
+								<img id="minutesDownLeft" src="Double/Down/Left/0.png" /><img id="minutesDownRight" src="Double/Down/Right/0.png" />
+								<img id="secondsDownLeft" src="Double/Down/Left/0.png" /><img id="secondsDownRight" src="Double/Down/Right/0.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="n3" class="fs-33 lh-1-8">
+					<script type="text/javascript">
+						document.write (xq[today.getDay()+1]);
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<div id="x1">
+				<div id="n1" class="fs-25 lh-2-5" >
+					<div id="m1">房型</div>
+					<div id="m2">挂牌价</div>
+					<div id="m3">会员价</div>
+				</div>
+
+				<div id="marqueebox0" class="box" style="overflow:hidden;width:100%;color:#ffffff;">
+					<ul id="box_ul">
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕舒适大床房</div>
+							<div id="m2">168</div>
+							<div id="m3">129</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕精选大床房</div>
+							<div id="m2">198</div>
+							<div id="m3">158</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕选双床房</div>
+							<div id="m2">209</div>
+							<div id="m3">168</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕棋牌大床房</div>
+							<div id="m2">245</div>
+							<div id="m3">208</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕套房</div>
+							<div id="m2">258</div>
+							<div id="m3">219</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕亲子房</div>
+							<div id="m2">268</div>
+							<div id="m3">228</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">巨幕豪华棋牌</div>
+							<div id="m2">288</div>
+							<div id="m3">245</div>
+						</li>
+
+						<li id="n1" class="fs-45 lh-2-1" style="height:100px;">
+							<div id="m1" style="width: 40%;height: 100%;overflow:hidden;">钟点房</div>
+							<div id="m2">99</div>
+							<div id="m3">88</div>
+						</li>
+
+					</ul>
+				</div>
+
+
+			</div>
+			<div id="x2">
+				<div id="n1">
+
+					<div id="flash">
+						<div id="prev"></div>
+						<div id="next"></div>
+						<ul id="play">
+							<li  style='display: block;'><img src='/static/me_photo/photo_015387717157.jpg'></li><li ><img src='/static/me_photo/photo_115387717157.jpg'></li><li ><img src='/static/me_photo/photo_215387717157.jpg'></li><li ><img src='/static/me_photo/photo_315387717157.jpg'></li><li ><img src='/static/me_photo/photo_415387717157.jpg'></li><li ><img src='/static/me_photo/photo_515387717157.jpg'></li></ul>
+						<ul id="button">
+							<li><div></div></li><li><div></div></li><li><div></div></li><li><div></div></li><li><div></div></li><li><div></div></li>
+						</ul>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="foot">
+			<div id="x1" class="fs-40 lh-1-2">
+				<div style='float: left;width:20%;text-align: right;padding-right: 15px;'><img src='/static/me_photo/ps2wm15387717157.png' height='140px'></div>		<div style="float: right;width:80%;line-height:100px;">
+				<marquee direction=left scrollamount=5 behavior=scroll>温馨提示：客房退房时间14:00之前</marquee>
+			</div>
+			</div>
+			<div id="x2">
+				<iframe width="95%" align="right" scrolling="no" height="150" frameborder="0" id="tqyb" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=19&color=%23FFFFFF&icon=3&temp=1&num=3&site=14" style="float:right;"></iframe>
+			</div>
+		</div>
+		<div style="width: 100%; height: 40px; position: relative; white-space: nowrap;" class="bottom">
+			<div style="position:absolute;left:50%;top:50%;transform: translate(-50%,-50%);color:#7f7f7f;font: 16px;">&copy; ga526酒店管理系统</div>
+			<div style="float: right;">
+				<input type="button" value="全 屏" id="btn" onclick="FullScreen();">
+			</div>
+		</div>
+	</div>
+</div>
+<script language="javascript">
+	boxheight();
+	function boxheight(){
+		var winHeight=0;
+		if (window.innerHeight)
+			winHeight = window.innerHeight;
+		else if ((document.body) && (document.body.clientHeight))
+			winHeight = document.body.clientHeight;
+		if (document.documentElement && document.documentElement.clientHeight)
+			winHeight = document.documentElement.clientHeight;
+		var dq_h = winHeight-420;
+		var dq_h2 = winHeight-470;
+		document.getElementById("content").style.height= dq_h+"px";
+		document.getElementById("marqueebox0").style.height= dq_h2+"px";
+	}
+	window.onresize=boxheight;
+
+	function startmarquee(lh,speed,delay,index){
+		var t;
+		var p=false;
+		var o=document.getElementById("marqueebox"+index);
+		var lis =document.getElementById('box_ul').getElementsByTagName('li').length;
+		lis = lis*100;
+		var mar_h = parseInt(document.getElementById("marqueebox0").style.height);
+		if (lis>mar_h)
+		{
+			o.innerHTML+=o.innerHTML;
+			o.innerHTML+=o.innerHTML;
+		}
+
+		o.scrollTop = 0;
+		function start(){
+			t=setInterval(scrolling,speed);
+			if(!p){ o.scrollTop += 1;}
+		}
+		function scrolling(){
+			if(o.scrollTop%lh!=0){
+				o.scrollTop += 1;
+				if(o.scrollTop>=o.scrollHeight/2) o.scrollTop = 0;
+			}else{
+				clearInterval(t);
+				setTimeout(start,delay);
+			}
+		}
+		setTimeout(start,delay);
+	}
+	startmarquee(100,30,1000,0);
+</script>
+<script type="text/javascript">
+	function show()
+	{
+		var login = document.getElementById('login');
+		var over = document.getElementById('over');
+		login.style.display = "block";
+		over.style.display = "block";
+		document.form1.phone.focus();
+	}
+	function hide()
+	{
+		var login = document.getElementById('login');
+		var over = document.getElementById('over');
+		login.style.display = "none";
+		over.style.display = "none";
+	}
+
+</script>
+
+
+</body>
+</html>
